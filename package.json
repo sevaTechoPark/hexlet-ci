@@ -2,7 +2,8 @@
   "scripts": {
     "test": "jest",
     "start": "nodos server",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "lint": "node_modules/eslint/bin/eslint.js -c .eslintrc.yml app --ext .js --fix-dry-run"
   },
   "jest": {
     "testEnvironment": "@nodosjs/jest-environment",
@@ -20,8 +21,9 @@
     "@nodosjs/db-typeorm-extension": "^0.0.57",
     "@nodosjs/view-extension": "^0.0.57",
     "@nodosjs/webpack-extension": "^0.0.57",
-    "sql.js": "^1.5.0",
-    "pg": "^8.5.1"
+    "babel-eslint": "^10.1.0",
+    "pg": "^8.5.1",
+    "sql.js": "^1.5.0"
   },
   "devDependencies": {
     "@nodosjs/jest-environment": "^0.0.57",
